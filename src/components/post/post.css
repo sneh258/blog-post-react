@@ -1,0 +1,16 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  /* padding-left: 10vw;
+  padding-right: 10vw; */
+  object-fit: cover;
+}
+
+/* @media (min-width: 400px) and (max-width: 700px) {
+  .posts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+} */

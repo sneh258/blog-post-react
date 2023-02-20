@@ -1,0 +1,15 @@
+.footer {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  color: aliceblue;
+  padding-left: 40px;
+  background-color: black;
+  height: 70px;
+  align-content: end;
+  margin-top: auto;
+}
+.footer #footercontent {
+  padding: 0 5px;
+  padding-top: 10px;
+}
