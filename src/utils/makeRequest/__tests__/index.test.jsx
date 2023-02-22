@@ -3,7 +3,7 @@ import {
   GET_BLOG_DATA,
   UPDATE_BLOG_DATA,
 } from "../../../constants/apiEndPoints";
-import makeRequest from "./../index";
+import makeRequest from "../index";
 import axios from "axios";
 
 jest.mock("axios");
