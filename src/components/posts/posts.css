@@ -6,9 +6,10 @@
 }
 .card {
   border: 1px solid black;
-  height: 55vh;
-  width: 20vw;
-  margin: 2vh;
+    height: 409px;
+    width: 250px;
+    margin: 0.5rem;
+    position: relative;
 }
 
 .img {
@@ -26,10 +27,6 @@
 }
 .content {
   padding: 1vh;
-  /* display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-} */
 }
 .text {
   padding: 2vh 0vh;
@@ -37,6 +34,10 @@
 
 .text p {
   padding-top: 1vh;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .likes img {

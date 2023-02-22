@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="footer"
+  >
+    <footer>
+      <div
+        id="footercontent"
+      >
+        <h5>
+          ©artifact.com 2019
+        </h5>
+      </div>
+    </footer>
+  </div>
+</DocumentFragment>
+`;
