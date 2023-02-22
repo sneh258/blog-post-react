@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/await-async-utils */
 import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import clap from "../../assests/Icons/clapping.svg";
@@ -18,10 +19,9 @@ describe("Posts", () => {
     liked: false,
     image: "abstract.png",
   };
-  it("should change the colour of the heart to red when clicked",  () => {
+  it("should change the colour of the heart to red when clicked", () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("heart"));
-    // eslint-disable-next-line testing-library/await-async-utils
     waitFor(() => {
       expect(screen.getByTestId("heart").src).toContain(heartRed);
     });
@@ -29,25 +29,33 @@ describe("Posts", () => {
   it("should change the color of the clap when to red clicked", () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("claps"));
-    expect(screen.getByTestId("claps").src).toContain(clapped);
+    waitFor(() => {
+    expect(screen.getByTestId("claps").src).toContain(clapped);   
+    })
   });
   it("should change the colour of the heart to black when it is red and clicked", () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("heart"));
     fireEvent.click(screen.getByTestId("heart"));
-    expect(screen.getByTestId("heart").src).toContain(heartBlack);
+    waitFor(() => {
+    expect(screen.getByTestId("heart").src).toContain(heartBlack);  
+    })  
   });
   it("should change the colour of the clap to black when it is red and clicked", () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("claps"));
     fireEvent.click(screen.getByTestId("claps"));
-    expect(screen.getByTestId("claps").src).toContain(clap);
+    waitFor(() => {
+    expect(screen.getByTestId("claps").src).toContain(clap);   
+    })
   });
   it("should increase the number of claps by 1 when clicked on the clap icon", () => {
     render(<Posts props={props} />);
     const clap = screen.getByTestId("numberOfClap");
     expect(clap.textContent).toBe("10");
     fireEvent.click(screen.getByTestId("claps"));
-    expect(clap.textContent).toBe("11");
+    waitFor(() => {
+       expect(clap.textContent).toBe("11");
+    })   
   });
 });

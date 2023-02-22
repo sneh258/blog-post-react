@@ -10,7 +10,6 @@ import { getFormattedDateFromUtcDate } from "./../../utils/common";
 
 export default function Posts({ props }) {
   // const imgSrc = require(`../assests/Images/${props.image}`);
-  console.log(props);
   const [like, setLike] = useState(props.liked);
   const [claps, setClaps] = useState(false);
   const [clapCount, setClapcount] = useState(props.claps);
