@@ -1,6 +1,8 @@
-import './header.css'
+import { useNavigate } from "react-router-dom";
+import "./header.css";
 
-export default function header() {
+export default function Header() {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="header">
@@ -14,9 +16,15 @@ export default function header() {
         </div>
         <div className="nav">
           <ul className="list">
-            <li id="l1">Blog</li>
-            <li id="l1">About</li>
-            <li id="l1">Contact</li>
+            <li id="l1" onClick={() => navigate("/error")}>
+              Blog
+            </li>
+            <li id="l1" onClick={() => navigate("*")}>
+              About
+            </li>
+            <li id="l1" onClick={() => navigate("/error")}>
+              Contact
+            </li>
           </ul>
         </div>
       </div>

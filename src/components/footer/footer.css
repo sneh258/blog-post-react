@@ -8,6 +8,10 @@
   height: 70px;
   align-content: end;
   margin-top: auto;
+  align-content:flex-end;
+  bottom: 0%;
+  position: -webkit-sticky; 
+  position: sticky;
 }
 .footer #footercontent {
   padding: 0 5px;

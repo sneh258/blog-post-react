@@ -5,6 +5,7 @@
   /* padding-left: 10vw;
   padding-right: 10vw; */
   object-fit: cover;
+  min-height: 100vh;
 }
 
 /* @media (min-width: 400px) and (max-width: 700px) {

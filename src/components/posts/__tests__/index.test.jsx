@@ -30,32 +30,32 @@ describe("Posts", () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("claps"));
     waitFor(() => {
-    expect(screen.getByTestId("claps").src).toContain(clapped);   
-    })
+      expect(screen.getByTestId("claps").src).toContain(clapped);
+    });
   });
   it("should change the colour of the heart to black when it is red and clicked", () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("heart"));
     fireEvent.click(screen.getByTestId("heart"));
     waitFor(() => {
-    expect(screen.getByTestId("heart").src).toContain(heartBlack);  
-    })  
+      expect(screen.getByTestId("heart").src).toContain(heartBlack);
+    });
   });
-  it("should change the colour of the clap to black when it is red and clicked", () => {
+  it("should change the colour of the clap to black when it is red and clicked", async () => {
     render(<Posts props={props} />);
     fireEvent.click(screen.getByTestId("claps"));
     fireEvent.click(screen.getByTestId("claps"));
     waitFor(() => {
-    expect(screen.getByTestId("claps").src).toContain(clap);   
-    })
+      expect(screen.getByTestId("claps").src).toContain(clap);
+    });
   });
-  it("should increase the number of claps by 1 when clicked on the clap icon", () => {
+  it("should increase the number of claps by 1 when clicked on the clap icon", async () => {
     render(<Posts props={props} />);
     const clap = screen.getByTestId("numberOfClap");
     expect(clap.textContent).toBe("10");
     fireEvent.click(screen.getByTestId("claps"));
     waitFor(() => {
-       expect(clap.textContent).toBe("11");
-    })   
+      expect(clap.textContent).toBe("11");
+    });
   });
 });
